@@ -96,7 +96,7 @@ text-shadow:0 0 10px #12d8fa;
 margin-bottom:6px;
 }
 
-/* BUTTON WITH INTERNAL LEFT INDICATOR */
+/* BUTTON WITH RIGHT SIDE INDICATOR */
 .btn-wrap{
 position:relative;
 margin-top:14px;
@@ -104,7 +104,7 @@ margin-top:14px;
 
 .btn{
 display:block;
-padding:15px 15px 15px 46px; /* left padding for indicator */
+padding:15px 46px 15px 15px; /* padding left for text, right for indicator */
 border-radius:40px;
 background:#00f2ff;
 color:#000;
@@ -123,10 +123,10 @@ position:relative;
 100%{transform:scale(1);}
 }
 
-/* LEFT SIDE VISUAL INDICATOR — POINTING TOWARDS TEXT */
+/* RIGHT SIDE VISUAL INDICATOR POINTING LEFT (👈) */
 .tap-indicator{
 position:absolute;
-left:12px; /* button ke left edge ke andar */
+right:12px; /* button ke right edge ke andar */
 top:50%;
 transform:translateY(-50%);
 font-size:28px;
@@ -206,8 +206,7 @@ box-shadow:0 0 25px #12d8fa;
 
 <div class="btn-wrap">
 <a href="https://t.me/+5qlxn-t_PTxjZGFl" class="btn">
-<span class="tap-indicator">👈</span>
-JOIN TELEGRAM
+JOIN TELEGRAM <span class="tap-indicator">👈</span>
 </a>
 </div>
 
