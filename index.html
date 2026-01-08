@@ -30,7 +30,6 @@ fbq('track','PageView');
 <img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=2047892055751860&ev=PageView&noscript=1"/>
 </noscript>
-<!-- End Meta Pixel Code -->
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,9 +55,7 @@ padding:25px 16px 110px;
 
 .profile-box{text-align:center;margin-bottom:20px;}
 .profile-box img{
-width:110px;
-height:110px;
-border-radius:50%;
+width:110px;height:110px;border-radius:50%;
 border:3px solid #00f2ff;
 box-shadow:0 0 20px #00f2ff,0 0 40px #00f2ff;
 }
@@ -74,11 +71,7 @@ color:#00f2ff;
 font-size:1.7rem;
 font-weight:900;
 letter-spacing:2px;
-box-shadow:
-0 0 10px #00f2ff,
-0 0 25px #00f2ff,
-0 0 45px #00f2ff,
-inset 0 0 15px #00f2ff;
+box-shadow:0 0 10px #00f2ff,0 0 25px #00f2ff,0 0 45px #00f2ff,inset 0 0 15px #00f2ff;
 animation:neonFlicker 2s infinite alternate;
 }
 
@@ -103,7 +96,7 @@ text-shadow:0 0 10px #12d8fa;
 margin-bottom:6px;
 }
 
-/* BUTTON + INDICATOR */
+/* BUTTON WITH INTERNAL RIGHT INDICATOR */
 .btn-wrap{
 position:relative;
 margin-top:14px;
@@ -111,7 +104,7 @@ margin-top:14px;
 
 .btn{
 display:block;
-padding:15px;
+padding:15px 46px 15px 15px; /* right space for indicator */
 border-radius:40px;
 background:#00f2ff;
 color:#000;
@@ -121,6 +114,7 @@ text-decoration:none;
 text-align:center;
 box-shadow:0 0 15px #00f2ff,0 0 35px #00f2ff;
 animation:neonZoom 1.6s ease-in-out infinite;
+position:relative;
 }
 
 @keyframes neonZoom{
@@ -129,21 +123,30 @@ animation:neonZoom 1.6s ease-in-out infinite;
 100%{transform:scale(1);}
 }
 
-/* VISUAL TAP INDICATOR (NO TEXT) */
+/* CLEAR RIGHT INDICATOR */
 .tap-indicator{
 position:absolute;
-top:-26px;
-right:22px;
-font-size:26px;
-color:#12d8fa;
-text-shadow:0 0 10px #12d8fa;
-animation:tapMove 1.2s infinite;
+right:18px;
+top:50%;
+transform:translateY(-50%);
+font-size:28px;
+color:#000;
+background:#12d8fa;
+width:32px;
+height:32px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 0 12px #12d8fa;
+animation:tapPulse 1.1s infinite;
+pointer-events:none;
 }
 
-@keyframes tapMove{
-0%{transform:translateY(0);opacity:.4;}
-50%{transform:translateY(8px);opacity:1;}
-100%{transform:translateY(0);opacity:.4;}
+@keyframes tapPulse{
+0%{transform:translateY(-50%) scale(1);opacity:.6;}
+50%{transform:translateY(-50%) scale(1.2);opacity:1;}
+100%{transform:translateY(-50%) scale(1);opacity:.6;}
 }
 
 .features{list-style:none;margin-top:10px;}
@@ -202,9 +205,12 @@ box-shadow:0 0 25px #12d8fa;
 <p style="opacity:.9">Well researched match insights & analysis</p>
 
 <div class="btn-wrap">
-<div class="tap-indicator">👇</div>
-<a href="#TELEGRAM_LINK_HERE" class="btn">JOIN TELEGRAM</a>
+<a href="#TELEGRAM_LINK_HERE" class="btn">
+JOIN TELEGRAM
+<span class="tap-indicator">👉</span>
+</a>
 </div>
+
 </div>
 
 <div class="card">
