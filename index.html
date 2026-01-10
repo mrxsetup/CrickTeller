@@ -49,7 +49,7 @@ background:radial-gradient(circle at top,#0b0f2a,#02030a 70%);
 .container{
 max-width:420px;
 margin:auto;
-padding:25px 16px 140px;
+padding:25px 16px 170px;
 }
 
 .profile-box{text-align:center;margin-bottom:20px;}
@@ -84,8 +84,6 @@ text-align:center;
 
 .card h2{color:#12d8fa;margin-bottom:6px}
 
-.btn-wrap{margin-top:14px}
-
 .btn{
 display:block;
 padding:15px;
@@ -99,7 +97,6 @@ animation:zoom 1.5s infinite;
 }
 @keyframes zoom{50%{transform:scale(1.08)}}
 
-/* RED WARNING TIMER */
 .warning{
 margin-top:10px;
 padding:10px;
@@ -107,7 +104,6 @@ border-radius:8px;
 background:#ff0000;
 color:#fff;
 font-weight:900;
-letter-spacing:1px;
 animation:vibrate .2s infinite;
 box-shadow:0 0 20px red;
 }
@@ -120,15 +116,28 @@ box-shadow:0 0 20px red;
 }
 
 .features{list-style:none;margin-top:10px}
-.features li{margin:6px 0}
 .features li::before{content:"⚡ ";color:#00f2ff}
 
-/* TRUST LINE */
 .trust{
 margin:10px 0 18px;
 font-weight:700;
-opacity:.95;
 text-shadow:0 0 8px #12d8fa;
+}
+
+/* ADS SETUP BOX */
+.ads-box{
+text-align:center;
+margin-bottom:8px;
+}
+.ads-box span{
+display:inline-block;
+padding:4px 10px;
+font-size:11px;
+border-radius:6px;
+border:1px solid #00f2ff;
+color:#00f2ff;
+box-shadow:0 0 8px #00f2ff;
+opacity:.85;
 }
 
 /* BOTTOM BAR */
@@ -165,18 +174,15 @@ box-shadow:0 0 25px #12d8fa;
 <div class="container">
 
 <div class="profile-box">
-<img src="https://raw.githubusercontent.com/mrxsetup/CrickTeller/main/crickteller.jpg" alt="CRICKTELLER">
+<img src="https://raw.githubusercontent.com/mrxsetup/CrickTeller/main/crickteller.jpg">
 <div class="name-box">CRICKTELLER</div>
 </div>
 
 <div class="card">
 <h2>Cricket Match Predictions</h2>
-
-<div class="btn-wrap">
 <a href="https://t.me/+5qlxn-t_PTxjZGFl" class="btn">JOIN TELEGRAM</a>
 <div class="warning">
 FREE JOINING ENDS IN <span id="timer">10</span> SEC
-</div>
 </div>
 </div>
 
@@ -194,6 +200,11 @@ FREE JOINING ENDS IN <span id="timer">10</span> SEC
 Trusted by thousands of lovers of cricket across India
 </div>
 
+</div>
+
+<!-- ADS BOX JUST ABOVE BUTTON -->
+<div class="ads-box">
+<span>Ads-Setup By @Mrxsetup</span>
 </div>
 
 <div class="bottom-bar">
