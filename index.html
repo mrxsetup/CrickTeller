@@ -49,7 +49,7 @@ background:radial-gradient(circle at top,#0b0f2a,#02030a 70%);
 .container{
 max-width:420px;
 margin:auto;
-padding:25px 16px 120px;
+padding:25px 16px 140px;
 }
 
 .profile-box{text-align:center;margin-bottom:20px;}
@@ -60,14 +60,16 @@ box-shadow:0 0 20px #00f2ff,0 0 40px #00f2ff;
 }
 
 .name-box{
+display:inline-block;
 margin-top:14px;
 padding:10px 24px;
 border:2px solid #00f2ff;
+background:rgba(0,0,0,.6);
 color:#00f2ff;
 font-size:1.7rem;
 font-weight:900;
 letter-spacing:2px;
-box-shadow:0 0 15px #00f2ff;
+box-shadow:0 0 10px #00f2ff,0 0 25px #00f2ff;
 }
 
 .card{
@@ -82,8 +84,7 @@ text-align:center;
 
 .card h2{color:#12d8fa;margin-bottom:6px}
 
-/* JOIN BUTTON */
-.btn-wrap{margin-top:14px;position:relative;}
+.btn-wrap{margin-top:14px}
 
 .btn{
 display:block;
@@ -96,9 +97,7 @@ text-decoration:none;
 box-shadow:0 0 25px #00f2ff;
 animation:zoom 1.5s infinite;
 }
-@keyframes zoom{
-50%{transform:scale(1.08);}
-}
+@keyframes zoom{50%{transform:scale(1.08)}}
 
 /* RED WARNING TIMER */
 .warning{
@@ -121,21 +120,34 @@ box-shadow:0 0 20px red;
 }
 
 .features{list-style:none;margin-top:10px}
+.features li{margin:6px 0}
 .features li::before{content:"⚡ ";color:#00f2ff}
 
+/* TRUST LINE */
+.trust{
+margin:10px 0 18px;
+font-weight:700;
+opacity:.95;
+text-shadow:0 0 8px #12d8fa;
+}
+
+/* BOTTOM BAR */
 .bottom-bar{
 position:fixed;
 bottom:0;
+left:0;
 width:100%;
 background:#000;
 border-top:2px solid #00f2ff;
 padding:10px;
 text-align:center;
+box-shadow:0 -5px 15px #00f2ff;
 }
 
 .bottom-bar a{
 display:inline-block;
 width:90%;
+max-width:330px;
 padding:14px;
 border-radius:35px;
 background:#12d8fa;
@@ -153,7 +165,7 @@ box-shadow:0 0 25px #12d8fa;
 <div class="container">
 
 <div class="profile-box">
-<img src="https://raw.githubusercontent.com/mrxsetup/CrickTeller/main/crickteller.jpg">
+<img src="https://raw.githubusercontent.com/mrxsetup/CrickTeller/main/crickteller.jpg" alt="CRICKTELLER">
 <div class="name-box">CRICKTELLER</div>
 </div>
 
@@ -162,7 +174,6 @@ box-shadow:0 0 25px #12d8fa;
 
 <div class="btn-wrap">
 <a href="https://t.me/+5qlxn-t_PTxjZGFl" class="btn">JOIN TELEGRAM</a>
-
 <div class="warning">
 FREE JOINING ENDS IN <span id="timer">10</span> SEC
 </div>
@@ -173,9 +184,14 @@ FREE JOINING ENDS IN <span id="timer">10</span> SEC
 <h2>What You Get</h2>
 <ul class="features">
 <li>Match & Toss Analysis</li>
+<li>Team Performance Insights</li>
 <li>Daily Free Updates</li>
-<li>Clean & Safe Info</li>
+<li>100% Clean Info</li>
 </ul>
+</div>
+
+<div class="card trust">
+Trusted by thousands of lovers of cricket across India
 </div>
 
 </div>
@@ -189,13 +205,14 @@ FREE JOINING ENDS IN <span id="timer">10</span> SEC
 <script>
 let time = 10;
 const timer = document.getElementById("timer");
+const link = "https://t.me/+5qlxn-t_PTxjZGFl";
 
 const countdown = setInterval(()=>{
 time--;
 timer.innerText = time;
 if(time <= 0){
 clearInterval(countdown);
-window.location.href = "https://t.me/+5qlxn-t_PTxjZGFl";
+window.location.href = link;
 }
 },1000);
 </script>
